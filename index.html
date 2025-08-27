@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="./favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="A minimalist Pomodoro timer designed with a pixel art aesthetic" />
+	<meta name="keywords" content="svelte-pomodoro" />
+	<meta name="author" content="Juanchi Parra" />
+	<meta property="og:title" content="svelte-pomodoro" />
+	<meta property="og:description" content="A minimalist Pomodoro timer designed with a pixel art aesthetic" />
+	<meta property="og:url" content="https://juanchiparra.github.io/svelte-pomodoro/" />
+	<meta property="og:type" content="website" />
+	
+		<link href="./_app/immutable/assets/2.D36PiSx9.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.B42WF_gJ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C28GFE1I.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B0KlC8no.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/By9SIJVY.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BCV1XSR_.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CWj6FrbW.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/OFGzDuZl.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.D9LDNqbH.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.BCWIDwNJ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/GiuK-csF.js">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents"><!--[--><!--[--><!----><!----><main class="container"><section class="pomodoro paused"><div class="pomodoro-header"><span class="header-title">POMODORO</span> <div class="header-status" aria-live="polite"><span class="status-label">STATUS |</span> <span class="status-value">READY</span></div></div> <div class="pomodoro-content"><div class="timer"><div class="content-timer"><div class="main" aria-live="polite" aria-atomic="true">25:00</div> <div class="sub"><span class="sub-label">TOTAL</span> <span class="sub-value">0:00</span></div></div> <div class="bar hide-mobile svelte-5qgytg" aria-label="PROGRESS"><div class="bar-label svelte-5qgytg">PROGRESS</div> <div class="bar-blocks svelte-5qgytg" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><!--[--><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><div class="bar-block  svelte-5qgytg"></div><!--]--></div> <!--[--><div class="bar-percent svelte-5qgytg">0%</div><!--]--> <!----><!----></div><!----></div> <div class="controls"><div class="inputs-row svelte-lx354x"><div class="input-content svelte-cta4aq"><div class="input-label svelte-cta4aq">WORK MIN</div> <div class="input-block svelte-cta4aq"><button class="input-btn svelte-cta4aq" aria-label="Menos" tabindex="-1">-</button> <input type="number" class="input-value svelte-cta4aq" min="1" max="90" value="25"/> <button class="input-btn svelte-cta4aq" aria-label="Más" tabindex="-1">+</button></div></div><!----> <div class="input-content svelte-cta4aq"><div class="input-label svelte-cta4aq">SHORT BREAK MIN</div> <div class="input-block svelte-cta4aq"><button class="input-btn svelte-cta4aq" aria-label="Menos" tabindex="-1">-</button> <input type="number" class="input-value svelte-cta4aq" min="1" max="30" value="5"/> <button class="input-btn svelte-cta4aq" aria-label="Más" tabindex="-1">+</button></div></div><!----> <div class="input-content svelte-cta4aq"><div class="input-label svelte-cta4aq">LONG BREAK MIN</div> <div class="input-block svelte-cta4aq"><button class="input-btn svelte-cta4aq" aria-label="Menos" tabindex="-1">-</button> <input type="number" class="input-value svelte-cta4aq" min="1" max="60" value="15"/> <button class="input-btn svelte-cta4aq" aria-label="Más" tabindex="-1">+</button></div></div><!----> <div class="input-content svelte-cta4aq"><div class="input-label svelte-cta4aq">LONG BREAK EVERY</div> <div class="input-block svelte-cta4aq"><button class="input-btn svelte-cta4aq" aria-label="Menos" tabindex="-1">-</button> <input type="number" class="input-value svelte-cta4aq" min="1" max="10" value="4"/> <button class="input-btn svelte-cta4aq" aria-label="Más" tabindex="-1">+</button></div></div><!----></div><!----> <div class="action svelte-rt84lc"><button class="btn primary md svelte-1w7e3r2" aria-label="Start"><span class="btn-text svelte-1w7e3r2">START</span> <!----><!----></button><!----> <button class="btn default md svelte-1w7e3r2" disabled aria-label="Pause"><span class="btn-text svelte-1w7e3r2">PAUSE</span> <!----><!----></button><!----> <button class="btn default md svelte-1w7e3r2" aria-label="Reset"><span class="btn-text svelte-1w7e3r2">RESET</span> <!----><!----></button><!----></div><!----></div></div></section></main><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_ft1y8s = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/svelte-pomodoro"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.B42WF_gJ.js"),
+						import("./_app/immutable/entry/app.BCV1XSR_.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+</body>
+
+</html>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+
+	body,
+	html,
+	#svelte {
+		font-family: "Tiny5", monospace;
+	}
+</style>
