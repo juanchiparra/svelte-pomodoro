@@ -1,0 +1,12 @@
+:root {
+    --primary-1: #4a3566;
+    --primary-2: #7a5a9c;
+    --primary-3: #2f2044;
+    --secondary-1: #f6deb6;
+    --secondary-2: #f4d6a3;
+    --secondary-3: #efd09a;
+    --gap: 1rem;
+    --radius: 6px;
+    --dark: var(--primary-1);
+    --light: var(--secondary-2);
+}

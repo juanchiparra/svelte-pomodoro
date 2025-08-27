@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="A minimalist Pomodoro timer designed with a pixel art aesthetic" />
+	<meta name="keywords" content="svelte-pomodoro" />
+	<meta name="author" content="Juanchi Parra" />
+	<meta property="og:title" content="svelte-pomodoro" />
+	<meta property="og:description" content="A minimalist Pomodoro timer designed with a pixel art aesthetic" />
+	<meta property="og:url" content="https://juanchiparra.github.io/svelte-pomodoro/" />
+	<meta property="og:type" content="website" />
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+
+	body,
+	html,
+	#svelte {
+		font-family: "Tiny5", monospace;
+	}
+</style>

@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    min-height: 100dvh;
+    background-color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.pomodoro {
+    --padding-x: 1.2rem;
+    --spacing: 6px;
+    --padding-y: 0.6rem;
+    background-color: var(--secondary-2);
+    border: 2px solid var(--primary-1);
+    border-radius: var(--radius);
+    box-shadow: 0 0 0 2px var(--primary-3);
+    min-width: 460px;
+    max-width: 900px;
+    margin: auto;
+    padding: var(--padding-y) var(--padding-x) 1.2rem var(--padding-x);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    position: relative;
+    z-index: 1;
+}
+
+.pomodoro::before {
+    content: "";
+    position: absolute;
+    inset: var(--spacing);
+    border: 2px solid var(--primary-1);
+    border-radius: calc(var(--radius) - 2px);
+    pointer-events: none;
+    box-shadow: inset -2px -2px 0 var(--primary-3);
+}
+
+.pomodoro-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--primary-1);
+    padding: 0.35rem 0.6rem;
+    margin-bottom: 0.7rem;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 4px;
+    margin-inline: calc(var(--spacing) - var(--padding-x));
+    padding-inline: calc(0.6rem + (var(--padding-x) - var(--spacing)));
+    margin-top: calc(var(--spacing) - var(--padding-y));
+}
+.header-title {
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    color: var(--light);
+}
+
+.pomodoro-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.content-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.main {
+    color: var(--primary-1);
+    font-size: 6.6rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.sub {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.sub-label {
+    color: var(--primary-1);
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+}
+
+.sub-value {
+    color: var(--primary-1);
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    width: 100%;
+}
+
+.header-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid var(--primary-1);
+    border-radius: 4px;
+    padding: 0.25rem 0.7rem;
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: none;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.header-status.work {
+    background-color: var(--dark);
+    color: var(--light);
+}
+.header-status.break {
+    background-color: var(--primary-2);
+    color: var(--light);
+}
+.header-status.long {
+    background-color: var(--primary-2);
+    color: var(--light);
+}
+.status-label {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.status-value {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 520px) {
+    .pomodoro {
+        width: calc(100% - 16px);
+        min-width: auto;
+        min-height: calc(100dvh - 16px);
+        max-height: calc(100dvh - 16px);
+        --padding-x: 0.8rem;
+        --padding-y: 0.5rem;
+    }
+    .pomodoro-header {
+        margin-bottom: 0.4rem;
+    }
+    .pomodoro-content {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        align-content: stretch;
+        justify-content: stretch;
+    }
+    .controls {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 0;
+        overflow: hidden;
+    }
+    .main {
+        font-size: clamp(3.6rem, 10vh, 7rem);
+    }
+}
