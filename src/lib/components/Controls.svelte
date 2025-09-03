@@ -44,18 +44,19 @@
 
 <style>
     .action {
-        display: flex;
-        gap: 0.8rem;
+        display: inline-flex;
+        gap: 0.6rem;
         justify-content: center;
         align-items: center;
         margin-top: 0.7rem;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     @media (max-width: 520px) {
         .action {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: clamp(0.6rem, 2.5vw, 1rem);
+            display: inline-flex;
+            gap: 0.6rem;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             margin-top: 0.4rem;
         }
