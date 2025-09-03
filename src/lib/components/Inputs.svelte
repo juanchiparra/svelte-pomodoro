@@ -33,7 +33,7 @@
             tabindex="-1"
             disabled={disabled || value <= min}>-</button
         >
-    <input
+        <input
             type="number"
             class="input-value"
             {min}
@@ -124,10 +124,10 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     .input-btn:disabled {
-        background-color: var(--primary-2);
-        color: rgba(244, 214, 163, 0.85);
+        background-color: var(--disabled-bg);
+        color: color-mix(in srgb, var(--disabled-fg) 85%, transparent);
         opacity: 0.8;
         cursor: not-allowed;
     }
@@ -136,7 +136,7 @@
         background-color: var(--light);
         color: var(--dark);
     }
-    
+
     .input-btn:focus-visible {
         outline: 2px dashed var(--secondary-3);
         outline-offset: 2px;
