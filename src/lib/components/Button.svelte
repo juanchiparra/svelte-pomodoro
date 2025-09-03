@@ -69,8 +69,8 @@
     }
 
     .btn:disabled {
-        background-color: var(--primary-2);
-        color: rgba(244, 214, 163, 0.85);
+        background-color: var(--disabled-bg);
+        color: color-mix(in srgb, var(--disabled-fg) 85%, transparent);
         opacity: 0.8;
         cursor: not-allowed;
         filter: none;
@@ -79,14 +79,14 @@
     .btn:active:not(:disabled) {
         transform: translate(1px, 1px);
     }
-	
+
     .btn-text {
         font-size: 0.95rem;
     }
 
     @media (max-width: 520px) {
         .btn {
-            width: 100%;
+            width: 64px;
             height: 64px;
         }
     }
