@@ -3,6 +3,8 @@
     import Progress from "$lib/components/Progress.svelte";
     import Controls from "$lib/components/Controls.svelte";
     import Settings from "$lib/components/Settings.svelte";
+    import Themes from "$lib/components/Themes.svelte";
+    import { play } from "$lib/sounds";
     import "$lib/styles/global.css";
     import "$lib/styles/variables.css";
 
@@ -26,6 +28,7 @@
     function startTimer() {
         if (isRunning) return;
         isRunning = true;
+        play("start");
         if (minutes === 0 && seconds === 0) {
             minutes = isWork
                 ? workMinutes
@@ -38,6 +41,8 @@
             totalSeconds++;
             if (seconds === 0) {
                 if (minutes === 0) {
+                    // phase end
+                    play("end");
                     if (isWork) {
                         shortBreakCount++;
                         if (shortBreakCount <= breaksBeforeLong) {
@@ -45,18 +50,21 @@
                             isLongBreak = false;
                             minutes = breakMinutes;
                             seconds = 0;
+                            play("shortBreak");
                         } else {
                             isWork = false;
                             isLongBreak = true;
                             minutes = longBreakMinutes;
                             seconds = 0;
                             shortBreakCount = 0;
+                            play("longBreak");
                         }
                     } else {
                         isWork = true;
                         isLongBreak = false;
                         minutes = workMinutes;
                         seconds = 0;
+                        play("work");
                     }
                 } else {
                     minutes--;
@@ -72,6 +80,7 @@
     function pauseTimer() {
         isRunning = false;
         if (interval) clearInterval(interval);
+        play("pause");
     }
 
     // Resets the timer
@@ -125,6 +134,7 @@
 <svelte:window on:keydown={handleKey} />
 
 <main class="container">
+    <Themes mode="outside" />
     <section class="pomodoro {isRunning ? 'running' : 'paused'}">
         <div class="pomodoro-header">
             <span class="header-title">POMODORO</span>
@@ -184,5 +194,6 @@
                 />
             </div>
         </div>
+        <Themes mode="inside" />
     </section>
 </main>
