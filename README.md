@@ -11,13 +11,13 @@ Demo: [https://juanchiparra.github.io/svelte-pomodoro/](https://juanchiparra.git
 - Pomodoro timer: A simple, customizable timer to manage your work and break sessions
 - Easy configuration: Quickly set the duration for work periods and breaks to fit your workflow
 - Minimalist and responsive design: A clean, pixel-art style interface that adapts to any screen
+- Default styles: Predefined style themes for a quick visual change
+- Sound notifications: Built-in sounds to indicate the status of the timer
 - Keyboard shortcuts: Start, pause, and reset the timer using your keyboard 
 - Visual progress tracking: A clear progress bar shows you exactly where you are in your cycle
 - Accessibility: Designed with accessibility in mind, including ARIA support for screen readers
 
 ### For future upgrade
-- Default styles: Predefined style themes for a quick visual change
-- Sound notifications: Add optional sounds to indicate the status of the timer
 - Documentation: Improve the usage instructions and add more detailed internal code comments
 
 ## Project structure
