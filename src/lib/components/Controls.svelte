@@ -2,21 +2,25 @@
     import Button from "./Button.svelte";
     import { createEventDispatcher } from "svelte";
 
-    // Controls
+    // Property to control the running state
     export let isRunning: boolean;
 
+    // Initialize the custom event dispatcher
     const dispatch = createEventDispatcher<{
         start: void;
         pause: void;
         reset: void;
     }>();
 
+    // Function to start, only if not running
     function start() {
         if (!isRunning) dispatch("start");
     }
+    // Function to pause, only if running
     function pause() {
         if (isRunning) dispatch("pause");
     }
+    // Function to reset
     function reset() {
         dispatch("reset");
     }
