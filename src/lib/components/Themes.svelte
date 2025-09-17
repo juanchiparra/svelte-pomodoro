@@ -1,6 +1,7 @@
 <script lang="ts">
     export let mode: "outside" | "inside" = "outside";
 
+    // Available themes
     const THEMES = [
         { id: "purple", label: "PRP", title: "Purple" },
         { id: "blue", label: "BLU", title: "Blue" },
@@ -8,8 +9,10 @@
         { id: "mono", label: "B/W", title: "Monochrome" },
     ] as const;
 
+    // Default selected theme
     let current = "purple";
 
+    // Change theme and save to localStorage
     function setTheme(id: string) {
         current = id;
         document.documentElement.setAttribute("data-theme", id);
@@ -18,6 +21,7 @@
         } catch {}
     }
 
+    // On load, retrieve saved theme from localStorage if it exists
     if (typeof window !== "undefined") {
         const saved = localStorage.getItem("theme");
         if (saved) {
@@ -27,6 +31,7 @@
     }
 </script>
 
+<!-- Theme switcher -->
 <div class="theme-switcher {mode}" aria-label="Theme" role="group">
     {#each THEMES as t}
         <button
