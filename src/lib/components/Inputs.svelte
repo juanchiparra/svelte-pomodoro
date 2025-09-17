@@ -1,20 +1,30 @@
 <script lang="ts">
+    // Label shown above the input
     export let label: string;
+    // Current numeric value of the input
     export let value: number;
+    // Minimum allowed value
     export let min: number = 1;
+    // Maximum allowed value
     export let max: number = 60;
+    // Disable input and buttons if true
     export let disabled: boolean = false;
+    // Callback called when value changes
     export let onChange: (v: number) => void;
 
+    // Clamp a number between min and max
     function clamp(n: number) {
         return Math.max(min, Math.min(max, n));
     }
+    // Decrease value by 1, respecting min/max and disabled
     function dec() {
         if (!disabled) onChange(clamp(value - 1));
     }
+    // Increase value by 1, respecting min/max and disabled
     function inc() {
         if (!disabled) onChange(clamp(value + 1));
     }
+    // Handle manual input changes
     function handleInput(e: Event) {
         if (disabled) return;
         const el = e.target as HTMLInputElement | null;
