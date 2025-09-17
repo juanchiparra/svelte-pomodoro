@@ -6,6 +6,7 @@
     export let size: "sm" | "md" | "lg" = "md";
     export let onClick: (() => void) | undefined;
 
+    // Handles the button click event, executing the onClick function if not disabled
     function handleClick() {
         if (!disabled && onClick) onClick();
     }
