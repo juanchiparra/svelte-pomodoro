@@ -174,7 +174,7 @@ body {
         max-height: calc(100dvh - 16px);
         --padding-x: 0.8rem;
         --padding-y: 0.5rem;
-        padding-bottom: 2.4rem; /* room for bottom theme switcher */
+        padding-bottom: 2.4rem; /* Spacing for bottom theme switcher */
     }
     .pomodoro-header {
         margin-bottom: 0.4rem;
