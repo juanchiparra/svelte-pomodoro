@@ -1,4 +1,4 @@
-// Lightweight WebAudio beeps for app events (no assets required)
+// Generates simple beeps using the Web Audio API for app events. No assets required
 // Usage: play("start" | "pause" | "work" | "shortBreak" | "longBreak" | "end")
 
 type SoundKind =
@@ -45,7 +45,7 @@ export async function play(kind: SoundKind) {
         try {
             await context.resume();
         } catch {
-            // ignore; will resume on next user gesture
+            // Browsers require a user gesture to start audio. The resume error is ignored
         }
     }
 
