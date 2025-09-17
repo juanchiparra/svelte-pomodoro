@@ -1,12 +1,20 @@
 <script lang="ts">
+    // Initial value for the progress percentage (0-100)
     export let percent: number = 0;
+    // Total number of blocks in the progress bar
     export let blocks: number = 30;
+    // Label displayed next to the bar
     export let label: string = "PROGRESS";
+    // Show numeric percentage next to the bar
     export let showPercent: boolean = true;
+    // Hide bar on mobile devices if true
     export let hideOnMobile: boolean = true;
 
+    // Ensure the percentage is a whole number between 0 and 100
     $: clamped = Math.max(0, Math.min(100, Math.round(percent)));
+    // Calculate filled blocks based on percentage
     $: filledBlocks = Math.round((clamped / 100) * blocks);
+    // Boolean array for rendering each block (true = filled)
     $: barBlocks = Array.from({ length: blocks }, (_, i) => i < filledBlocks);
 </script>
 
